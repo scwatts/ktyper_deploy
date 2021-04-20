@@ -1,0 +1,17 @@
+[Unit]
+Description=ktyper huey queuer
+After=syslog.target
+
+[Service]
+WorkingDirectory=/opt/ktyper/
+ExecStart=/opt/ktyper/venv/bin/python /opt/ktyper/manage.py run_huey
+User=www-data
+Group=www-data
+Restart=on-failure
+KillSignal=SIGQUIT
+Type=simple
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,17 @@
+[Unit]
+Description=ktyper uWSGI
+After=syslog.target ktyper-uwsgi.socket
+Requires=ktyper-uwsgi.socket
+
+[Service]
+ExecStart=/usr/bin/uwsgi --json /etc/uwsgi/apps-enabled/ktyper.json
+User=www-data
+Group=www-data
+Restart=on-failure
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=default.target

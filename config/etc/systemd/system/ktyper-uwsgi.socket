@@ -1,0 +1,12 @@
+[Unit]
+Description=Socket for ktyper uWSGI
+PartOf=ktyper-uwsgi.service
+
+[Socket]
+ListenStream=/run/ktyper_uwsgi.socket
+SocketUser=www-data
+SocketGroup=www-data
+SocketMode=0660
+
+[Install]
+WantedBy=sockets.target

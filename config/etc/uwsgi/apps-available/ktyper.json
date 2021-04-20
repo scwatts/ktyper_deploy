@@ -1,0 +1,10 @@
+{
+  "uwsgi" : {
+    "master": true,
+    "need-plugin": "python3",
+    "chdir": "/opt/ktyper/",
+    "manage-script-name": true,
+    "wsgi-file": "config/wsgi.py",
+    "virtualenv": "/opt/ktyper/venv"
+  }
+}
