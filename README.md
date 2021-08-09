@@ -139,7 +139,7 @@ in the `spectracl` GitHub repo and then reinstall `spectracl` into the virtual e
 
 ```bash
 . /opt/ktyper/venv/bin/activate
-pip3 install --force-reinstall git+https://github.com/scwatts/ktyper.git
+pip3 install --force-reinstall git+https://github.com/scwatts/spectracl.git
 ```
 
 Following this all services should be restarted to ensure the update is propogated:
